@@ -1,8 +1,7 @@
 projects:
   default:
     schema:
-      - ../reporter/api/graphql/schema/*.graphqls
-      - ./$houdini/graphql/schema.graphql
+      - ./schema.graphql
     documents:
       - '**/*.gql'
       - '**/*.svelte'
