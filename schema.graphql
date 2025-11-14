@@ -1,0 +1,19 @@
+"""
+Directs the executor to defer this fragment when the `if` argument is true or undefined.
+"""
+directive @defer(
+  """Deferred when true or undefined."""
+  if: Boolean = true
+
+  """Unique name"""
+  label: String
+) on FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+type Invoice {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  invoices: [Invoice!]!
+}
